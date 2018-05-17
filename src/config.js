@@ -33,6 +33,11 @@ const config = {
           safe: true
         }
       }
+    },
+    consul: {
+      host: '127.0.0.1', // consul server IP
+      port: 8500, // consul server port
+      secure: false
     }
   },
   test: {

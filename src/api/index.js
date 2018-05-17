@@ -1,6 +1,7 @@
 import { Router } from 'express'
-import user from './user'
-import auth from './auth'
+// Application Modules
+import doCharge from './do-charge'
+import dnd from './dnd'
 
 const router = new Router()
 
@@ -27,7 +28,9 @@ const router = new Router()
  * @apiParam {String[]} [sort=-createdAt] Order of returned items.
  * @apiParam {String[]} [fields] Fields to be returned.
  */
-router.use('/users', user)
-router.use('/auth', auth)
+
+// Custom modules goes here
+router.use('/do-charges', doCharge)
+router.use('/dnds', dnd)
 
 export default router
